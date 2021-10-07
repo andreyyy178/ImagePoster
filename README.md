@@ -1,6 +1,6 @@
 # Project 3 - *Image Poster*
 
-**Name of your app** is a photo sharing app similar to Instagram but using Parse as its backend.
+**Image Poster** is a photo sharing app similar to Instagram but using Parse as its backend.
 
 Time spent: **5** hours spent in total
 
