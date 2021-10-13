@@ -1,5 +1,6 @@
 package com.example.imageposter;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -41,12 +42,12 @@ public class SignUpActivity extends AppCompatActivity {
                 String username = etUsername.getText().toString();
                 String password = etPassword.getText().toString();
                 String passwordConfirm = etRepeatPassword.getText().toString();
-                signUpUser(username, passwordConfirm, password);
+                signUpUser(username, password, passwordConfirm);
             }
         });
     }
 
-    private void signUpUser(String username,String password, String passwordConfirm)
+    private void signUpUser(@NonNull String username, String password, String passwordConfirm)
     {
         Log.i(TAG, "Attempting to SignUp user " + username);
 
@@ -56,8 +57,8 @@ public class SignUpActivity extends AppCompatActivity {
             return;
         }
 
-        if(passwordConfirm!=password) {
-            Toast.makeText(SignUpActivity.this, "Passwords don't match", Toast.LENGTH_LONG);
+        if(passwordConfirm.equals(password)==false) {
+            Toast.makeText(SignUpActivity.this, "Passwords don't match", Toast.LENGTH_LONG).show();
             return;
         }
 
