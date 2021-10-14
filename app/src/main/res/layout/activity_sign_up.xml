@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:layout_margin="16dp"
     android:orientation="vertical"
-    tools:context=".LoginActivity" >
+    tools:context=".SignUpActivity">
 
     <EditText
         android:id="@+id/etUsername"
@@ -24,15 +24,16 @@
         android:ems="10"
         android:hint="password" />
 
-    <Button
-        android:id="@+id/btnLogin"
+    <EditText
+        android:id="@+id/etPasswordConfirm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="Login" />
+        android:ems="10"
+        android:hint="repeat password" />
 
     <Button
-        android:id="@+id/btnSignup"
+        android:id="@+id/etSignup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
